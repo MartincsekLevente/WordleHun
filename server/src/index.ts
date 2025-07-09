@@ -2,9 +2,12 @@ import express from 'express';
 import dotenv from 'dotenv';
 import mongoose from "mongoose";
 import * as process from "node:process";
+import wordRoutes from "./routes/wordRoutes.js";
 
 dotenv.config();
 const app = express();
+
+app.use('/api', wordRoutes);
 
 mongoose.connect(process.env.MONGO_URI as string)
     .then(() => {
@@ -17,9 +20,3 @@ mongoose.connect(process.env.MONGO_URI as string)
     .catch((err) => {
         console.error('❌ MongoDB connection error:', err);
     });
-
-app.get('/', (req, res) => {
-    res.send('Hello from your Express backend!')
-});
-
-
