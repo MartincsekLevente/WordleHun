@@ -1,16 +1,13 @@
 import './GamePage.scss';
+import Board from "../../components/board/Board.tsx";
+import Keyboard from "../../components/keyboard/Keyboard.tsx";
 
 export default function GamePage() {
     return (
         <>
-            <div className="game-title">
-                WORDLE HUN
-            </div>
-            <div className="game-subtitle">
-                Találd ki a szót!
-            </div>
-            <div className="guess-table">
-                Guess table
+            <div className="game-area">
+                <Board></Board>
+                <Keyboard></Keyboard>
             </div>
         </>
     );

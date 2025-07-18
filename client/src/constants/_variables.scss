@@ -1,1 +1,12 @@
-$bg_gradient_green: linear-gradient(#32CD32, #CCFF00);
+$bg_hun_flag: linear-gradient(to bottom,
+    #ce1126 0%, /* Red */
+    #ce1126 33.33%,
+    #ffffff 33.33%, /* White */
+    #ffffff 66.66%,
+    #008751 66.66%, /* Green */
+    #008751 100%);
+
+$bg_blank: #121213;
+
+
+$board_tile_gap: 5px;

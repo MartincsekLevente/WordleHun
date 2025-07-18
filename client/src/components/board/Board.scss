@@ -1,0 +1,7 @@
+@use "../../constants/variables.scss" as *;
+
+.board-table {
+    display: flex;
+    flex-direction: column;
+    gap: $board_tile_gap;
+}

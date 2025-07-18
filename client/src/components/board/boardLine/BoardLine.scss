@@ -1,0 +1,6 @@
+@use "../../../constants/variables.scss" as *;
+
+.board-line-container {
+    display: flex;
+    gap: $board_tile_gap;
+}
