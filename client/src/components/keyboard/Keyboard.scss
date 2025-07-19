@@ -1,0 +1,17 @@
+@use '../../constants/variables.scss' as *;
+
+.keyboard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $keyboard_button_gap;
+
+    .keyboard-row {
+        display: flex;
+        gap: $keyboard_button_gap;
+
+        &:nth-child(even) {
+            margin-left: 10px;
+        }
+    }
+}
