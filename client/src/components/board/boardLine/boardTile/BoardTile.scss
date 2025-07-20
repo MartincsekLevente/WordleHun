@@ -1,5 +1,12 @@
+@use '../../../../constants/variables.scss' as *;
+
 .board-tile-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: $board_tile_font_size;
     width: 62px;
     height: 62px;
-    border: 2px solid #3a3a3c;
+    border: 2px solid $board_tile_color_default;
+    user-select: none;
 }

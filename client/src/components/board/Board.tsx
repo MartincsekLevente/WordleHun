@@ -9,13 +9,12 @@ export default function Board({input}: BoardProps) {
 
     return (
         <div className="board-table">
-            {input}
-            <BoardLine lineIndex={0}></BoardLine>
-            <BoardLine lineIndex={1}></BoardLine>
-            <BoardLine lineIndex={2}></BoardLine>
-            <BoardLine lineIndex={3}></BoardLine>
-            <BoardLine lineIndex={4}></BoardLine>
-            <BoardLine lineIndex={5}></BoardLine>
+            <BoardLine lineIndex={0} input={input.join("")}></BoardLine>
+            <BoardLine lineIndex={1} input={""}></BoardLine>
+            <BoardLine lineIndex={2} input={""}></BoardLine>
+            <BoardLine lineIndex={3} input={""}></BoardLine>
+            <BoardLine lineIndex={4} input={""}></BoardLine>
+            <BoardLine lineIndex={5} input={""}></BoardLine>
         </div>
     );
 }

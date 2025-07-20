@@ -6,7 +6,7 @@ interface KeyboardButtonProps {
     onClick: () => void,
 }
 
-export default function KeyboardButton({buttonKey, long = false, onClick}: KeyboardButtonProps) {
+export default function KeyboardButton({buttonKey, long, onClick}: KeyboardButtonProps) {
     return (
         <div className={`keyboard-button-container ${long ? "long" : ""}`} onClick={onClick}>
             {buttonKey}

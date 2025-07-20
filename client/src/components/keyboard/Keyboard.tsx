@@ -10,8 +10,8 @@ export default function Keyboard({onKeyPress}: KeyboardProps) {
         ["Á", "É", "Í", "Ó", "Ö", "Ő", "Ú", "Ü", "Ű"],
         ["Q", "W", "E", "R", "T", "Z", "U", "I", "O", "P"],
         ["A", "S", "D", "F", "G", "H", "J", "K", "L"],
-        ["⌫", "Z", "X", "C", "V", "B", "N", "M", "➤"],
-    ]
+        ["Töröl", "Z", "X", "C", "V", "B", "N", "M", "Beküld"],
+    ];
 
     return (
         <div className="keyboard-container">
@@ -20,6 +20,7 @@ export default function Keyboard({onKeyPress}: KeyboardProps) {
                     {row.map((letter) =>
                         <KeyboardButton
                             key={letter}
+                            long={letter.length !== 1}
                             buttonKey={letter}
                             onClick={() => onKeyPress(letter)}
                         />
