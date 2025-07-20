@@ -2,12 +2,13 @@ import './KeyboardButton.scss';
 
 interface KeyboardButtonProps {
     buttonKey: string,
-    long?: boolean
+    long?: boolean,
+    onClick: () => void,
 }
 
-export default function KeyboardButton({buttonKey, long = false}: KeyboardButtonProps) {
+export default function KeyboardButton({buttonKey, long = false, onClick}: KeyboardButtonProps) {
     return (
-        <div className={`keyboard-button-container ${long ? "long" : ""}`}>
+        <div className={`keyboard-button-container ${long ? "long" : ""}`} onClick={onClick}>
             {buttonKey}
         </div>
     );
