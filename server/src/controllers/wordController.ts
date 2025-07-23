@@ -8,7 +8,7 @@ export async function getRandomWord(req: Request, res: Response) {
         if (randomWord.length === 0) {
             res.status(404).json({message: "No words found"});
         } else {
-            res.json({ word: randomWord[0].text });
+            res.json({ word: randomWord[0].text.split("") });
         }
     } catch (err) {
         console.error("Error while fetching random word: " + err);
